@@ -1,0 +1,57 @@
+  ___
+ /  _)             |
+|      ,_    _   __|  o _|_  ,
+|     /  |  |/  /  |  |  |  / \
+ \___/   |_/|__/\_/|_/|_/|_/ \/ 
+________________________________
+
+A game by Sheepolution.
+ ___________________________________________________
+|                    _     _                        |
+|               .- `   `- `  ` _                    |
+|             (                    )                |
+|          (                     )    )  _.-._      |
+|        /                   -(-.-)     )  -',)     |
+|      (           ('.')                   )  )     |
+|     |         _      `      )          )      )   |
+|    (         ) '/     -('.')-   (.,.')   -('.')-  |
+|     (            ,_                      )    )   |
+|       (_________)  (      -(.,.)-           )     |
+|       |         |   ` _ , _ ___   _   _  )        |
+|       |         |          (___)- (.,.) -         |
+|       |         |           | |    | |            |
+|       |         |                      \__/       |
+|      |           |                     (   )      |
+|      |           |                    (     )     |
+|      |           |                    _(.,' )_    |
+|     /             \         ,-  -,                |
+|    /               \     (.-) _ _ )               |
+|   /                 \       ||  ||                |
+|  '--______________--'                             |
+|___________________________________________________|
+
+https://sheepolution.com/
+https://sheepolution.itch.io/
+https://twitter.com/sheepolution
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+All ASCII Art except font by Sheepolution.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+"And yet it hurt" and "Credits" font is Script by Glenn Chappell.
+"The End" font is Santa Clara by Jan Wolter. Rest in peace.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+The writing software is Notepad2 by Florian Balmer, modified by Sheepolution.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Special thanks to the LÖVE Community.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Thank you for playing! <3
+

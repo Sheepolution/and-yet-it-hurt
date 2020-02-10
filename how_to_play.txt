@@ -1,0 +1,21 @@
+Unzip all files in a folder and start and_yet_it_hurt.exe.
+
+You might get a warning, which you can ignore. You get this warning because the software is unknown to Windows and therefore deemed dangerous (but it's not).
+Your virus scanner also might not like this game, but again, it's fine.
+If this all sounds sketchy to you, note that the game is open source, so if anything harmful would be at play, you and others would be able to see it.
+
+When you start the game the following three things will open:
+
+A console window
+A specific folder in your file explorer
+Notepad
+
+By closing the console window you exit the game.
+
+The folder opened in your file explorer will have the files that are used to play the game.
+
+Notepad is where the game is played in. If you close Notepad, the game will reopen it for you, along with your file explorer if you closed that as well.
+
+Normally you will have to drag and drop the files onto the Notepad that the game has opened for you. However, by running the game as administrator you should be able to just double click the files to open them. Either way you can play the game like normal.
+
+Enjoy!
