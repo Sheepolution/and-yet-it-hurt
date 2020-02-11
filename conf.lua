@@ -1,7 +1,7 @@
 function love.conf(t)
 	io.stdout:setvbuf("no")
 
-	t.identity = "and_yet_it_hurt"
+	t.identity = "And yet it hurt"
 	t.version = "11.3"
 	t.console = true
 

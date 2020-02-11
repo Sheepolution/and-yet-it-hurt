@@ -86,10 +86,14 @@ Close this window to quit the game.]])
 
     info = love.filesystem.getInfo(".data")
     if not info then
-        love.filesystem.write(".data", "{}")
+        local data = {version = "1.1"}
+        love.filesystem.write(".data", lume.serialize(data))
     end
 
     local data = lume.deserialize(love.filesystem.read(".data"))
+    if data.version ~= "1.1" then
+        love.filesystem.setIdentity("and_yet_it_hurt")
+    end
     DATA = data
     if DATA.admin then
         ADMIN = true
