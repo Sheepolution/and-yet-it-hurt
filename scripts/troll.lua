@@ -12,7 +12,8 @@ function Troll:new()
     self:setOptions({
         {
             text = [["May I pass?"]],
-            func = F(self, "ask")
+            func = F(self, "ask"),
+            default = true
         },
         {
             text = [["Why not?"]],
@@ -20,7 +21,8 @@ function Troll:new()
             remove = true
         },
         {
-            text = "Back."
+            text = "Back.",
+            func = F(self, "back")
         }
     })
 
@@ -68,11 +70,13 @@ function Troll:cross()
 end
 
 function Troll:back()
-	self:setOptions({})
+    self:setText("[username] decided to walk back.")
 	self.deleteOnClose = true
-	Game:removeFile("smith")
-	Game:removeFile("eastown_gate")
-	Game:addFile(require("castle")())
+	self:setOptions({})
+	Game:addFile(require("westown_gate")())
+	Game:addFile(require("dragonhill_gate")())
+	Game:addFile(require("edbur_post_lament")())
+	Game:addFile(require("elli")())
 end
 
 return Troll
