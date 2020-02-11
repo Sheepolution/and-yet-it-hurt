@@ -319,5 +319,11 @@ function Fight:onVictory()
 end
 
 function Fight:resetStep()
-
+	local Forest = require("forest")
+	local CastleInside = require("castle_inside")
+	if CastleInside.step < 3 then
+		CastleInside.step = 1
+	end
+	Forest.step = 1
+	
 end

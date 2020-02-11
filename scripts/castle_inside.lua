@@ -23,16 +23,13 @@ end
 function CastleInside:walk()
 	self.dead = true
 	if CastleInside.step == 3 then
+	if CastleInside.step >= 3 then
 		self:loadThroneRoom()
 		return
 	elseif CastleInside.step == 1 then
 		Game:replaceFile("castle", require("tentacle")("castle", "castle_inside"))
 	elseif CastleInside.step == 2 then
 		Game:replaceFile("castle", require("spider")("castle", "castle_inside"))
-	elseif CastleInside.step == 3 then
-	-- 	Game:replaceFile("castle", require("bigmouth")("castle"))
-	-- else
-		Game:replaceFile("castle", require("throne_room")())
 	end
 	CastleInside.step = CastleInside.step + 1
 end
