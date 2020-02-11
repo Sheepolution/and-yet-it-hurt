@@ -9,7 +9,7 @@ function WestownGate:new(text)
 	end
 
 	if not text then
-		self:setText([[A knight was guarding the gate. "Greetings," said the knight. "You're not allowed to enter if you don't have a weapon to defend yourself. Wild animals live in the tall grass!"]])
+		self:setText([[A knight was guarding the gate. "Greetings," said the knight. "This is the gate to Westown. You're not allowed to enter if you don't have a weapon to defend yourself. Wild animals live in the tall grass!"]])
 	elseif type(text) == "string" then
 		self:setText(text)
 	end
@@ -23,7 +23,7 @@ function WestownGate:new(text)
 		},
 		{
             text = [["Who are you?"]],
-            response = [["My name is Sundare. I am one of the three Serpent Knight Brothers."]]
+            response = [["The name is Leff. I am one of the three Serpent Knight Brothers."]]
 		},
 		{
 			text = [["What's up?"]],

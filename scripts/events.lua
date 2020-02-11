@@ -16,7 +16,7 @@ Events.passedForest = false
 
 Events.gaveGuardLongerSword = false
 Events.fixedGuardsSigil = false
-Events.guessedGuardsName = false
+Events.foundGuardsRing = false
 
 Events.sawCastleGate = false
 Events.metAnn = false

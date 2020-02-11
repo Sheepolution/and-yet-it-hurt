@@ -2,7 +2,9 @@ local DragonhillGate = File:extend()
 
 function DragonhillGate:new(text)
 	DragonhillGate.super.new(self, "dragonhill gate")
-	Art.new(self, "guard")
+	Art.new(self, "guard_hill")
+	self.anim:add("leaves", 2)
+	self.anim:add("guard", 1)
 
 	if not text then
 		self:setText([[A knight was guarding the gate. "Greetings," said the knight. "No one is allowed to enter. Uphill is where the dragon lives."]])
@@ -22,8 +24,8 @@ function DragonhillGate:new(text)
 					remove = true
 				},
 				{
-					text = [["If you say so...," said [username].]],
-					func = F(self, "new", [["If you say  so..."]])
+					text = [["If you say so..."]],
+					func = F(self, "new", [["If you say so...," said [username].]])
 				}
 			}
 		},
@@ -45,22 +47,26 @@ function DragonhillGate:new(text)
 		},
 		{
 			text = [["Who are you?"]],
-			condition = function () return not Events.guessedGuardsName end,
-			response = [["I am one of the three Serpent Knight Brothers. Can you guess what my name is? If you guess correct I'll give you some gold. Fill the brackets ([]) with my name."]],
-			options = {
-				{
-					text = [["Is that your name?"]],
-					func = F(self, "guessName")
-				},
-				{
-					text = [["I'll guess it later."]],
-					func = F(self, "new", [["I'll guess it later."]])
-				}
-			}
+			response = [["The name is Nord. I am one of the three Serpent Knight Brothers."]]
 		},
 		{
 			text = [["What's up?"]],
-			response = [["Nothing, really."]]
+			anim = "leaves",
+			condition = function () return not Events.foundGuardsRing end,
+			response = [["Well I'm glad you asked. You see, I lost my ring in this mountain of leaves. It looks like a '9'. Can you find it for me?
+When you find it, replace it with a '0'."]],
+			options = {
+				{
+					text = [["I found it!"]],
+					default = true,
+					func = F(self, "findRing")
+				},
+				{
+					text = [["Not now."]],
+					anim = "guard",
+					func = F(self, "new", [["Not now."]])
+				}
+			}
 		}
 	})
 
@@ -68,36 +74,25 @@ function DragonhillGate:new(text)
 end
 
 
-function DragonhillGate:guessName()
-    local fail = true
-    local i = 0
-    for line in (self.rContent .. "\n"):gmatch("(.-)\n") do
-        i = i + 1
-		if i == 37 then
-			print(line)
-            if line:lower():find("%[%s?sanderu%s?%]") then
-                fail = false
-                break
-            end
-        end
-	end
-
-	if not fail then
-		Events.guessedGuardsName = true
+function DragonhillGate:findRing()
+    self.rContent = love.filesystem.read(self.file)
+	if self.rContent:find("566556565056565656565") then
+		Events.foundGuardsRing = true
 		self.player.gold = self.player.gold + 25
-		self:setText([["That's correct! Amazing!" The knight named Sanderu handed [username] 25 gold.]])
+		self.anim:set("guard")
+		self:setText([["You really did find it! Thanks a lot!" The knight handed [username] 25 gold.]])
 		self:setOptions({
 			{
-				text = [["Thanks!"]],
-				func = F(self, "new", [["Thanks!"]])
+				text = [["You're welcome."]],
+				func = F(self, "new", [["You're welcome," said [username].]])
 			},
 			{
-				text = [["Cool!"]],
-				func = F(self, "new", [["Cool!"]])
+				text = [["No problem."]],
+				func = F(self, "new", [["No problem," said [username].]])
 			}
 		})
 	else
-		self:setText([["A good guess, but alas, that is not my name."]])
+		self:setText([["Well, no, not really. Are you sure you found my ring that looks like a '9' and replaced it with a '0'?"]])
 	end
 end
 
