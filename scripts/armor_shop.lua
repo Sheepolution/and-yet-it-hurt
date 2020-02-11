@@ -1,7 +1,7 @@
 local ArmorShop = File:extend()
 
 function ArmorShop:new(text)
-	ArmorShop.super.new(self, "armor_shop")
+	ArmorShop.super.new(self, "armor shop")
     Art.new(self, "armor_shop")
 
     self.player:regainHealth()

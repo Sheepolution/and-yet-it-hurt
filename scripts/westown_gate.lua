@@ -1,7 +1,7 @@
 local WestownGate = File:extend()
 
 function WestownGate:new(text)
-	WestownGate.super.new(self, "westown_gate")
+	WestownGate.super.new(self, "westown gate")
 	if Events.fixedGuardsSigil then
 		Art.new(self, "guard")
 	else
@@ -49,8 +49,8 @@ end
 function WestownGate:enter()
 	self:setOptions({})
 	self.deleteOnClose = true
-	Game:removeFile("dragonhill_gate")
-	Game:removeFile("weapon_shop")
+	Game:removeFile("dragonhill gate")
+	Game:removeFile("weapon shop")
 	Game:removeFile("house")
 	Game:addFile(require("forest")("west"))
 end

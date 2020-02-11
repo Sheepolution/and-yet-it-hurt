@@ -1,7 +1,7 @@
 local CastleGate = File:extend()
 
 function CastleGate:new()
-	CastleGate.super.new(self, "castle_gate")
+	CastleGate.super.new(self, "castle gate")
 	-- self:init()
 
 	if self.isOpen then
@@ -40,8 +40,8 @@ function CastleGate:enter()
 	self:setOptions({})
 	self.deleteOnClose = true
 	Game:removeFile("smith")
-	Game:removeFile("eastown_gate")
-	Game:removeFile("armor_shop")
+	Game:removeFile("eastown gate")
+	Game:removeFile("armor shop")
 	Game:addFile(require("castle")())
 end
 

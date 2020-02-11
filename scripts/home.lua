@@ -40,7 +40,7 @@ function Home:mom()
 				text = [["I did."]],
 				condition = function () print(Events.gavePantsToEdbur) return Events.gavePantsToEdbur end,
 				response = [["Thanks, sweety, could you hand me the-" Suddenly [username]'s mother was interrupted by a loud bell. [His] mother's smile instantly vanished. "It can't be! What do we do, Harold?". [username] was confused and asked what was going on.]],
-				func = function () Game:removeFile("house") Game:removeFile("weapon_shop") end,
+				func = function () Game:removeFile("house") Game:removeFile("weapon shop") end,
 				options = {
 					{
 						text = "Continue.",

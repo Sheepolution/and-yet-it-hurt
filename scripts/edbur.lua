@@ -1,7 +1,7 @@
 local Edbur = File:extend()
 
 function Edbur:new()
-	Edbur.super.new(self, "weapon_shop")
+	Edbur.super.new(self, "weapon shop")
 	Art.new(self, "weapon_shop")
 
 	self.anim:add("laughing", 2)
@@ -18,7 +18,7 @@ function Edbur:new()
 					func = function ()
 						Game:removeFile("home")
 						Game:removeFile("house")
-						Game:removeFile("grocery_store")
+						Game:removeFile("grocery store")
 					end,
 					options = {
 						{
@@ -57,7 +57,7 @@ function Edbur:new()
 				func = function ()
 					Game:removeFile("home")
 					Game:removeFile("house")
-					Game:removeFile("grocery_store")
+					Game:removeFile("grocery store")
 				end,
 				options = {
 					{

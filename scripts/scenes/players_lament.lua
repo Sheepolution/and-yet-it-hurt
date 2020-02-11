@@ -1,6 +1,6 @@
 local scene = {
 	isScene = true,
-	name = "weapon_shop",
+	name = "weapon shop",
 	art = "players_lament",
 	anims = function (self)
 		self.anim:add("bed", 2)
@@ -62,7 +62,7 @@ local scene = {
 			text = [[Edbur sighed. "Very well. Follow me. I will teach you how to fight."]]
 		},
 		{
-			func = function () Game:replaceFile("weapon_shop", require("edbur_fighting")()) end
+			func = function () Game:replaceFile("weapon shop", require("edbur_fighting")()) end
 		}
 	}
 }

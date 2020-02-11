@@ -2,7 +2,7 @@ local EdburFighting = Fight:extend()
 
 local huge = math.huge
 function EdburFighting:new()
-	EdburFighting.super.new(self, "weapon_shop")
+	EdburFighting.super.new(self, "weapon shop")
 	Art.new(self, "edbur_fighting")
 
 	self.anim:add("attacking", 3);
@@ -125,7 +125,7 @@ end
 
 function EdburFighting:onEdit()
 	if self.learningState == 3 then
-		Game:replaceFile("weapon_shop", require("edbur_post_fight")())
+		Game:replaceFile("weapon shop", require("edbur_post_fight")())
 	end
 	EdburFighting.super.onEdit(self)
 end

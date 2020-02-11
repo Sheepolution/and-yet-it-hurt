@@ -1,7 +1,7 @@
 local DragonhillGate = File:extend()
 
 function DragonhillGate:new(text)
-	DragonhillGate.super.new(self, "dragonhill_gate")
+	DragonhillGate.super.new(self, "dragonhill gate")
 	Art.new(self, "guard")
 
 	if not text then
@@ -105,9 +105,9 @@ function DragonhillGate:enter()
 	self:setText([["I can't believe it. Very well then, you may enter. Good luck out there, kid."]])
 	self:setOptions({})
 	self.deleteOnClose = true
-	Game:removeFile("weapon_shop")
+	Game:removeFile("weapon shop")
 	Game:removeFile("house")
-	Game:removeFile("westown_gate")
+	Game:removeFile("westown gate")
 	Game:addFile(require("troll")())
 end
 

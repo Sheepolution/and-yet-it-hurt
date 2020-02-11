@@ -1,7 +1,7 @@
 local GroceryStore = File:extend()
 
 function GroceryStore:new()
-	GroceryStore.super.new(self, "grocery_store")
+	GroceryStore.super.new(self, "grocery store")
 	Art.new(self, "grocery_store")
 	self.anim:add("open", 2)
 	self.anim:add("closed", 1)

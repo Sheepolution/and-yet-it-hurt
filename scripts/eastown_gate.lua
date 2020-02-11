@@ -1,7 +1,7 @@
 local EastownGate = File:extend()
 
 function EastownGate:new(text)
-	EastownGate.super.new(self, "eastown_gate")
+	EastownGate.super.new(self, "eastown gate")
 	if Events.gaveGuardLongerSword then
 		Art.new(self, "guard_long_sword")
 	else
@@ -46,8 +46,8 @@ end
 function EastownGate:enter()
 	self:setOptions({})
 	self.deleteOnClose = true
-	Game:removeFile("castle_gate")
-	Game:removeFile("armor_shop")
+	Game:removeFile("castle gate")
+	Game:removeFile("armor shop")
 	Game:removeFile("smith")
 	if not Events.movedAnn then
 		Game:removeFile("house")

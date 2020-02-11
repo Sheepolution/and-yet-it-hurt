@@ -1,7 +1,7 @@
 local EdburPost = File:extend()
 
 function EdburPost:new()
-	EdburPost.super.new(self, "weapon_shop")
+	EdburPost.super.new(self, "weapon shop")
 	Art.new(self, "weapon_shop")
 	self.anim:add("blush", 6)
 	self.anim:add("idle", 4)
@@ -91,6 +91,7 @@ function EdburPost:endCutscene()
 	Events.postLament = true
 	Game:replaceFile("weapon_shop", require("edbur_post_lament")([["Thanks Edbur!" said [username] as [he] gave Edbur a hug. "No problem, kid," said Edbur. "Be careful out there."
 (From now on your progress will be saved automatically)]]))
+	Game:replaceFile("weapon shop", require("edbur_post_lament")(text))
 	Game:addFile(require("westown_gate")())
 	Game:addFile(require("dragonhill_gate")())
 	Game:addFile(require("elli")())

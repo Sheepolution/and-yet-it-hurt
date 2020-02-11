@@ -1,7 +1,7 @@
 local EdburPostLament = File:extend()
 
 function EdburPostLament:new(first, revive)
-	EdburPostLament.super.new(self, "weapon_shop")
+	EdburPostLament.super.new(self, "weapon shop")
 	Art.new(self, "weapon_shop")
 	self.anim:add("blush", 6)
     self.anim:add("idle", 4)
