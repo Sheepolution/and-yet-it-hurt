@@ -70,7 +70,6 @@ function Forest:goBack()
 	else
 		self:loadEast()
 	end
-	Game:addFile()
 end
 
 function Forest:loadEast()

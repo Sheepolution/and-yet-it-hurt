@@ -165,7 +165,7 @@ function Elli:checkRoom()
         if self.rContent:find("|_____|||_.` `*                       `. |||", 1, true) then
             print("?????")
             Art.new(self, "room3")
-            self:setText([[The old lady looked outside and saw she's in Eastown. "Wonderful! Thank you dear." She grabbed the key from her closet, and handed it to [username], along with 20 gold. "Good luck defeating my grandfather", she said with a smile.]])
+            self:setText([[The old lady looked outside and saw she was in Eastown. "Wonderful! Thank you dear." She grabbed the key from her closet, and handed it to [username], along with 20 gold. "Good luck defeating my grandfather", she said with a smile.]])
             self.player.gold = self.player.gold + 20
             Events.movedAnn = true
             local t = lume.clone(Items["castleGateKey"])

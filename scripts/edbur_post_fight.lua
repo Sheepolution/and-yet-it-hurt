@@ -89,8 +89,9 @@ end
 
 function EdburPost:endCutscene()
 	Events.postLament = true
-	Game:replaceFile("weapon_shop", require("edbur_post_lament")([["Thanks Edbur!" said [username] as [he] gave Edbur a hug. "No problem, kid," said Edbur. "Be careful out there."
-(From now on your progress will be saved automatically)]]))
+	local text = [["Thanks Edbur!" said [username] as [he] gave Edbur a hug. "No problem, kid," said Edbur. "Be careful out there."
+(From now on your progress will be saved automatically)]]
+	self:setText(text)
 	Game:replaceFile("weapon shop", require("edbur_post_lament")(text))
 	Game:addFile(require("westown_gate")())
 	Game:addFile(require("dragonhill_gate")())

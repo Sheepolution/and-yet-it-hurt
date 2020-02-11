@@ -98,6 +98,7 @@ Close this window to quit the game.]])
     if data.version ~= "1.1" then
         love.filesystem.setIdentity("and_yet_it_hurt")
     end
+
     DATA = data
     if DATA.admin then
         ADMIN = true
