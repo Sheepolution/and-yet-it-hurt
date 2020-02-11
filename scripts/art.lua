@@ -121,7 +121,7 @@ function Art:loadArt(name)
 	local frames = {}
 
 	if art:sub(1, 5) == "{{F}}" then
-		art = art .. "\n\r{{F}}"
+		art = art .. "\n{{F}}"
 		self:grabFrames(art:sub(6, art:len()))
 		art = self.frames[1]
 	else
