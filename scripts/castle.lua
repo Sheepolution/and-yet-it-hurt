@@ -38,11 +38,20 @@ end
 
 function Castle:door()
     Events.sawSecondGate = true
+    self:setText("[username] stood in front of a huge door.")
     if Events.castleUnlocked then
         self.anim:set("unlocked")
+        self:setOptions({
+            {
+                text = "Go inside.",
+                func = F(self, "inside")
+            },
+            {
+                text = "Go back.",
+                func = F(self, "new", true)
+            }
+        })
     else
-        self:setText("[username] stood in front of a huge door.")
-
         self.anim:set("door")
         self:setOptions({
             {
