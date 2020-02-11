@@ -145,7 +145,7 @@ function love.update(dt)
     -- If for some reason the command doesn't work and after 3 times it still tries to reopen Notepad, just quit.
     if reopened < 3 then
         timer = timer + dt
-        if timer > 200 then
+        if timer > 2 then
             timer = 0
             -- Find an instance of Notepad2.exe
             local error_code = os.execute([[tasklist /FI "IMAGENAME eq Notepad2.exe" | find /I /N "Notepad2.exe" > NUL 2>&1]])
