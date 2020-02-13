@@ -26,7 +26,7 @@ local scene = {
 		},
 		{
 			anim = "stopped",
-			text = "But before [he] could get even close to the dragon [he] was grabbed by the arm.",
+			text = "But before [he] could get even close to the dragon [he] [was] grabbed by the arm.",
 		},
 		{
 			anim = "Edbur",

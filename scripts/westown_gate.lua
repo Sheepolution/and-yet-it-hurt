@@ -78,7 +78,7 @@ function WestownGate:fixSigil()
 		Events.fixedGuardsSigil = true
 		self.player.gold = self.player.gold + 25
 		Art.new(self, "guard")
-		self:setText([["That's perfect! Thanks a lot! Here, have some gold." The knight handed username 25 gold.]])
+		self:setText([["That's perfect! Thanks a lot! Here, have some gold." The knight handed [username] 25 gold.]])
 		self:setOptions({
 			{
 				text = [["You're welcome."]],

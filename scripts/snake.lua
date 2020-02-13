@@ -19,7 +19,7 @@ function Snake:new(...)
 
 	self.strength = 10
 
-	self.description = "Suddenly, [username] encountered a snake. They are very fast, making them hard to attack and doge their fangs."
+	self.description = "Suddenly, [username] encountered a snake. They are very fast, making them hard to attack and dodge their fangs."
 	self.attackDescription = "The snake aimed its fangs at [username]"
 	self.prepareAttackDescription = "Then the snake was preparing for an attack!"
 end
