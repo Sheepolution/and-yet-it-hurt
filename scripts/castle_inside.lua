@@ -22,7 +22,6 @@ end
 
 function CastleInside:walk()
 	self.dead = true
-	if CastleInside.step == 3 then
 	if CastleInside.step >= 3 then
 		self:loadThroneRoom()
 		return
