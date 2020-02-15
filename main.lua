@@ -52,7 +52,9 @@ oldprint([[  ___,                                          _
                             \|   by Sheepolution
 
 Close Notepad to re-open the game folder.
-Close this window to quit the game.]])
+Close this window to quit the game.
+
+Version 1.1.1]])
 
     os.execute("title And yet it hurt")
 
@@ -90,14 +92,11 @@ Close this window to quit the game.]])
 
     info = love.filesystem.getInfo(".data")
     if not info then
-        local data = {version = "1.1"}
+        local data = {version = "1.1.1"}
         love.filesystem.write(".data", lume.serialize(data))
     end
 
     local data = lume.deserialize(love.filesystem.read(".data"))
-    if data.version ~= "1.1" then
-        love.filesystem.setIdentity("and_yet_it_hurt")
-    end
 
     DATA = data
     if DATA.admin then
