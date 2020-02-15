@@ -23,6 +23,7 @@ function EdburPostLament:new(first, revive)
 	}})
 
     if Events.passedForest then
+        self.anim:add("blush", 8)
         self.anim:add("naked", 7)
         self:setText([["Good to see you're still alive [username]!"]])
         self:setOptions({
@@ -91,6 +92,7 @@ end
 
 function EdburPostLament:room(revive)
     Art.new(self, "room")
+	self:setOnItems({})
 
     if revive then
         if revive == 9 then
