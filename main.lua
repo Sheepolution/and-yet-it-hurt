@@ -54,7 +54,7 @@ oldprint([[  ___,                                          _
 Close Notepad to re-open the game folder.
 Close this window to quit the game.
 
-Version 1.1.1]])
+Version 1.1.2]])
 
     os.execute("title And yet it hurt")
 
@@ -96,7 +96,7 @@ Version 1.1.1]])
 
     info = love.filesystem.getInfo(".data")
     if not info then
-        local data = {version = "1.1.1"}
+        local data = {version = "1.1.2"}
         love.filesystem.write(".data", lume.serialize(data))
     end
 
