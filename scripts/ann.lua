@@ -9,7 +9,7 @@ function Ann:new(text)
     print(Events.sawCastleGate, Events.gaveNoteToFerdan)
 
     if Events.metAnn then
-        self:setText([[Please let me know when you're done with moving."]])
+        self:setText([["Please let me know when you're done with moving."]])
         self:setOptions({
             {
                     text = [["Okay."]]
