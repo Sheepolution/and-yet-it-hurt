@@ -85,9 +85,13 @@ Version 1.1.1]])
     if not info then
         local exe = love.filesystem.newFileData("_notepad/Notepad2.exe" )
         local ini = love.filesystem.newFileData("_notepad/Notepad2.ini" )
+        local dll1 = love.filesystem.newFileData("_notepad/msvcp140.dll" )
+        local dll2 = love.filesystem.newFileData("_notepad/vcruntime140.dll" )
         love.filesystem.createDirectory(".notepad")
         love.filesystem.write(".notepad/Notepad2.exe", exe)
         love.filesystem.write(".notepad/Notepad2.ini", ini)
+        love.filesystem.write(".notepad/msvcp140.dll", dll1)
+        love.filesystem.write(".notepad/vcruntime140.dll", dll2)
     end
 
     info = love.filesystem.getInfo(".data")
